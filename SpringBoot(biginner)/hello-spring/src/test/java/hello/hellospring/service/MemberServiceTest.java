@@ -14,8 +14,8 @@ class MemberServiceTest {
     왜냐하면 영어권 사람과 일하는 것이 아니라면 직관적인
     이해를 위해 한국어를 사용하고 실제 build에 사용되지
     않기 때문에 한국어를 사용해도 됨*/
-    MemberService memberService = new MemberService(memberRepository);
-    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+    MemberService memberService;
+    MemoryMemberRepository memberRepository;
 
 
     //각 테스트 실행전에 수행됨
