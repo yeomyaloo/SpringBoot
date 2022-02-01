@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import posts.Posts;
 
+// Controller와 Service의 중간에서 사용할 Dto 클래스
 @Getter
 @NoArgsConstructor
 public class PostsSaveRequestDto {
@@ -27,7 +28,5 @@ public class PostsSaveRequestDto {
                 .author(author)
                 .content(content)
                 .build();
-
-
     }
 }

@@ -7,14 +7,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-//클래스 내의 모든 필드의 Getter 메소드를 자동 생성
-@Getter
 
-//public Posts()와 같은 효과
-@NoArgsConstructor
-
-//테이블과 링크될 클래스임을 나타낸다.
-@Entity
+@Getter //클래스 내의 모든 필드의 Getter 메소드를 자동 생성
+@NoArgsConstructor //public Posts()와 같은 효과
+@Entity //테이블과 링크될 클래스임을 나타낸다.
 public class Posts {
 
     //해당 테이블의 PK 필드를 나타낸다. Primary key
@@ -37,10 +33,14 @@ public class Posts {
     //해당 클래스의 빌더 패턴 클래스를 생성.
     //생성자 상단에 선언 시 생성자에 포함된 필드만 빌더에 포함
     @Builder
-
     public Posts(String title, String author, String content) {
         this.title = title;
         this.author = author;
+        this.content = content;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
         this.content = content;
     }
 }
