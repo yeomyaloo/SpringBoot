@@ -4,7 +4,7 @@ package com.yeomyaloo.book.springboot.web.dto;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import posts.Posts;
+import com.yeomyaloo.book.springboot.domain.posts.Posts;
 
 // Controller와 Service의 중간에서 사용할 Dto 클래스
 @Getter

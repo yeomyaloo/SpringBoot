@@ -1,4 +1,4 @@
-package posts;
+package com.yeomyaloo.book.springboot.domain.posts;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

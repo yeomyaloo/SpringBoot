@@ -1,7 +1,7 @@
 package com.yeomyaloo.book.springboot.web.dto;
 
 import lombok.Getter;
-import posts.Posts;
+import com.yeomyaloo.book.springboot.domain.posts.Posts;
 
 @Getter
 public class PostsResponseDto {
