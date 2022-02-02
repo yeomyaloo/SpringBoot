@@ -1,5 +1,6 @@
-package com.yeomyaloo.book.springboot.web;
+package com.yeomyaloo.book.springboot.web.web;
 
+import com.yeomyaloo.book.springboot.web.HelloController;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

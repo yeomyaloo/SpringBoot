@@ -1,4 +1,4 @@
-package com.yeomyaloo.book.springboot.web;
+package com.yeomyaloo.book.springboot.web.web;
 
 import com.yeomyaloo.book.springboot.web.dto.PostsSaveRequestDto;
 import com.yeomyaloo.book.springboot.web.dto.PostsUpdateRequestDto;
