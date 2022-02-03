@@ -11,4 +11,9 @@ public class IndexController {
     public String index(){
         return "index";
     }
+
+    @GetMapping("/posts/save") //2. url 주소가 이렇게 되는 곳으로 연결해줌.
+    public String postsSave(){
+        return "posts-save";//1. 이 이름이 있는 index파일을 찾아서
+    }
 }
