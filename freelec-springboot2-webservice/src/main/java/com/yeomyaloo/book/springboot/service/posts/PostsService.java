@@ -1,14 +1,17 @@
 package com.yeomyaloo.book.springboot.service.posts;
 
-import com.yeomyaloo.book.springboot.web.dto.PostsUpdateRequestDto;
-import com.yeomyaloo.book.springboot.web.dto.PostsResponseDto;
-import com.yeomyaloo.book.springboot.web.dto.PostsSaveRequestDto;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
 import com.yeomyaloo.book.springboot.domain.posts.Posts;
 import com.yeomyaloo.book.springboot.domain.posts.PostsRepository;
+import com.yeomyaloo.book.springboot.web.dto.PostsListResponseDto;
+import com.yeomyaloo.book.springboot.web.dto.PostsResponseDto;
+import com.yeomyaloo.book.springboot.web.dto.PostsSaveRequestDto;
+import com.yeomyaloo.book.springboot.web.dto.PostsUpdateRequestDto;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 // @Autowired 없이 생성자 주입이 되는 이유는??
 // final이 선언된 모든 필드를 인자값으로 하는 생성자를 롬복의 @RequiredArgsConstructor가 대신 생성해준 것.
@@ -38,4 +41,10 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
 
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc(){
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
+    }
 }
