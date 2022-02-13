@@ -2,10 +2,12 @@ package com.yeomyaloo.book.springboot.web;
 
 
 import com.yeomyaloo.book.springboot.service.posts.PostsService;
+import com.yeomyaloo.book.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @RequiredArgsConstructor
 @Controller
@@ -18,10 +20,16 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/posts/save") //2. url 주소가 이렇게 되는 곳으로 연결해줌.
-    public String postsSave(){
-        return "posts-save";//1. 이 이름이 있는 index파일을 찾아서
+    @GetMapping("/posts/save")
+    public String postsSave() {
+        return "posts-save";
     }
 
+    @GetMapping("/posts/update/{id}")
+    public String postsUpdate(@PathVariable Long id, Model model) {
+        PostsResponseDto dto = postsService.findById(id);
+        model.addAttribute("post", dto);
 
+        return "posts-update";
+    }
 }
