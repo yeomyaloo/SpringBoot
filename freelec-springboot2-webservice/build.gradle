@@ -33,6 +33,9 @@ dependencies {
 
 	//머스태치 의존성 추가
 	implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+	//스프링 시큐리티 관련 의존성 추가
+	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
 }
 
 tasks.named('test') {
