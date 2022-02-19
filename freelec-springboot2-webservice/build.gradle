@@ -36,7 +36,13 @@ dependencies {
 
 	//스프링 시큐리티 관련 의존성 추가
 	implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+
+	//세선 저장소로 데이터베이스를 사용하기 위한 의존성 추가
+	implementation('org.springframework.session:spring-session-jdbc')
+
+	testImplementation("org.springframework.security:spring-security-test")
 }
+
 
 tasks.named('test') {
 	useJUnitPlatform()
