@@ -16,8 +16,6 @@ public class MvcMemberListServlet extends HttpServlet {
 
         @Override
         protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            System.out.println("MvcMemberListServlet.service");
-
             List<Member> members = memberRepository.findAll();
 
             request.setAttribute("members", members);
