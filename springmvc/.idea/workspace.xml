@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44039d9a-2b2e-4c3d-aff2-9d01fb5062a5" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/java/hello/itemservice/ItemServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/java/hello/itemservice/domain/item/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/java/hello/itemservice/domain/item/ItemRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/java/hello/itemservice/domain/web/basic/BasicItemController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/static/html/addForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/static/html/editForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/static/html/item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/static/html/items.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/templates/basic/addForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/templates/basic/editForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/templates/basic/item.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/main/resources/templates/basic/items.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/test/java/hello/itemservice/ItemServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springMVC(2)/_item-service/item-service/src/test/java/hello/itemservice/domain/item/ItemRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/SpringmvcApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/HelloData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/LogTestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/request/RequestBodyJsonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/request/RequestBodyStringController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/request/RequestHeaderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/request/RequestParamController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/requestmapping/MappingClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/requestmapping/MappingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/response/ResponseBodyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/basic/response/ResponseViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hello/springmvc/practice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/basic/hello-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/response/hello.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hello/springmvc/SpringmvcApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26lP2XQvVXBFfOTEhIW9IzXHtzj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springMVC2(1)/thymleaf-basic/build.gradle" />
+    <property name="project.structure.last.edited" value="SDK" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yeomyaloo\Documents\GitHub\SpringBoot\springmvc\src\main\resources\templates\response" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringmvcApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hello.springmvc.SpringmvcApplication" />
+      <module name="springmvc.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hello.springmvc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.SpringmvcApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="44039d9a-2b2e-4c3d-aff2-9d01fb5062a5" name="변경" comment="" />
+      <created>1647994992895</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647994992895</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
