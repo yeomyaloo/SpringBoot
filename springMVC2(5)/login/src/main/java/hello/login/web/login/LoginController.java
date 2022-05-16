@@ -22,7 +22,7 @@ public class LoginController {
         return "login/loginForm";
     }
     @PostMapping("/login")
-    public String login(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult) {
+    public String login(@Valid @ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletResponse response) {
         if (bindingResult.hasErrors()) {
             return "login/loginForm";
         }
@@ -33,7 +33,25 @@ public class LoginController {
             bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");
             return "login/loginForm";
         }
-        //로그인 성공 처리 TODO
+
+        //로그인 성공 처리
+
+        //쿠키에 시간 정보를 주지 않으면 세션 쿠키(브라우저를 종료하게 되면 로그아웃 됨)
+        Cookie idCookie = new Cookie("memberId", String.valueOf(loginMember.getId()));
+        response.addCookie(idCookie);
+
         return "redirect:/";
+    }
+
+    @PostMapping("/logout")
+    public String logout(HttpServletResponse response){
+        expireCookie(response, "memberId");
+        return "redirect:/";
+    }
+
+    private void expireCookie(HttpServletResponse response, String cookieName) {
+        Cookie cookie = new Cookie("cookieName", null);
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
     }
 }
