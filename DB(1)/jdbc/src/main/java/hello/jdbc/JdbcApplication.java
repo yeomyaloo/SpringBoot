@@ -1,13 +1,13 @@
-package com.example.demo;
+package hello.jdbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class JdbcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-
+		SpringApplication.run(JdbcApplication.class, args);
 	}
+
 }
