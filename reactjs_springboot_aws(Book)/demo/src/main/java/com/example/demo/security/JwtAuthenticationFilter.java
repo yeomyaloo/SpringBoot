@@ -41,7 +41,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
                 //인증 완료
                 AbstractAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
-                        userId,
+                        userId, // <- AutheticationPrincipal
                         null,
                         AuthorityUtils.NO_AUTHORITIES
                 );

@@ -4,6 +4,7 @@ import com.example.demo.model.UserEntity;
 import com.example.demo.persistence.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,7 +31,18 @@ public class UserService {
 
     }
     //로그인 시 인증에 사용할 메서드
-    public UserEntity getByCredentials(final String email, final String password){
-        return userRepository.findByEmailAndPassword(email, password);
+    public UserEntity getByCredentials(final String email, final String password,
+                                       PasswordEncoder encoder){
+
+        final UserEntity originalUser = userRepository.findByEmail(email);
+
+        //matches 메서드를 사용해 패스워드가 같은지 확인
+        if(originalUser != null &&
+            encoder.matches(password, originalUser.getPassword())){
+            return originalUser;
+        }
+
+
+        return null;
     }
 }
