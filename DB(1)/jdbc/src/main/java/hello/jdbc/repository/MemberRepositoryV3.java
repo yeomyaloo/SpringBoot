@@ -1,17 +1,14 @@
 package hello.jdbc.repository;
-
 import hello.jdbc.domain.Member;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.datasource.DataSourceUtils;
 import org.springframework.jdbc.support.JdbcUtils;
-
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.NoSuchElementException;
-
 /**
  * 트랜잭션 - 트랜잭션 매니저
- * DataSourceUtils.getConnect()
+ * DataSourceUtils.getConnection()
  * DataSourceUtils.releaseConnection()
  */
 @Slf4j
@@ -20,7 +17,6 @@ public class MemberRepositoryV3 {
     public MemberRepositoryV3(DataSource dataSource) {
         this.dataSource = dataSource;
     }
-
     public Member save(Member member) throws SQLException {
         String sql = "insert into member(member_id, money) values(?, ?)";
         Connection con = null;
@@ -65,8 +61,23 @@ public class MemberRepositoryV3 {
             close(con, pstmt, rs);
         }
     }
-
-
+    public void update(String memberId, int money) throws SQLException {
+        String sql = "update member set money=? where member_id=?";
+        Connection con = null;
+        PreparedStatement pstmt = null;
+        try {
+            con = getConnection();
+            pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1, money);
+            pstmt.setString(2, memberId);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            log.error("db error", e);
+            throw e;
+        } finally {
+            close(con, pstmt, null);
+        }
+    }
     public void delete(String memberId) throws SQLException {
         String sql = "delete from member where member_id=?";
         Connection con = null;
@@ -86,19 +97,12 @@ public class MemberRepositoryV3 {
     private void close(Connection con, Statement stmt, ResultSet rs) {
         JdbcUtils.closeResultSet(rs);
         JdbcUtils.closeStatement(stmt);
-
-        //커넥션을 무작정 꺼버리는 건 아니고 어떨 땐 끄고 어떨 땐 켜놓고를 유지해야 함
-        //JdbcUtils.closeConnection(con);
-        //트랜잭션 동기화 사용을 위해서는 DataSourceUtils를 사용해야 한다.
+        //주의! 트랜잭션 동기화를 사용하려면 DataSourceUtils를 사용해야 한다.
         DataSourceUtils.releaseConnection(con, dataSource);
-
     }
     private Connection getConnection() throws SQLException {
-
-        //트랜잭션 동기화 사용은 DataSourceUtils를 사용해야 한다.
-        DataSourceUtils.getConnection(dataSource);
-
-        Connection con = dataSource.getConnection();
+        //주의! 트랜잭션 동기화를 사용하려면 DataSourceUtils를 사용해야 한다.
+        Connection con = DataSourceUtils.getConnection(dataSource);
         log.info("get connection={} class={}", con, con.getClass());
         return con;
     }
